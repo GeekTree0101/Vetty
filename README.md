@@ -1,4 +1,4 @@
-![alt text](https://github.com/GeekTree0101/Vetty/blob/master/res/vetty_logo.png)
+![alt text](https://github.com/GeekTree0101/Vetty/blob/master/res/logo.png)
 
 [![CI Status](https://img.shields.io/travis/Geektree0101/Vetty.svg?style=flat)](https://travis-ci.org/Geektree0101/Vetty)
 [![Version](https://img.shields.io/cocoapods/v/Vetty.svg?style=flat)](https://cocoapods.org/pods/Vetty)
