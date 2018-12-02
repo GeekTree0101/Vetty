@@ -5,10 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/Vetty.svg?style=flat)](https://cocoapods.org/pods/Vetty)
 [![Platform](https://img.shields.io/cocoapods/p/Vetty.svg?style=flat)](https://cocoapods.org/pods/Vetty)
 
+## Feature
+Link: https://github.com/GeekTree0101/Vetty/projects/2
+
 ## Usage
 <br /><br />
 
 ### Make a model
+<br />
+
 ```swift
 class User: VettyProtocol { // <--- STEP1: Inherit VettyProtocol
     
@@ -34,6 +39,7 @@ class User: VettyProtocol { // <--- STEP1: Inherit VettyProtocol
 <br /><br />
 
 ### Commit
+<br />
 
 1. Directly commit model
 ```swift
@@ -52,6 +58,7 @@ let userIdForVettyObservable: Observable<VettyIdentifier> =
 
 
 ### READ
+<br />
 
 > Directly read model object from Vetty
 ```swift
@@ -61,6 +68,7 @@ let user: User? = Vetty.shared.read(type: User.self, uniqueKey: 12345)
 <br /><br />
 
 ### Model Observable
+<br />
 
 ```swift
 let userObservable: Observable<User?> = Vetty.rx.model(type: User.self, uniqueKey: 12345)
@@ -68,6 +76,8 @@ let userObservable: Observable<User?> = Vetty.rx.model(type: User.self, uniqueKe
 <br /><br />
 
 ### Mutating
+<br />
+
 1. Directly Mutating
 ```swift
 guard let user = Vetty.shared.read(type: User.self, uniqueKey: 12345) else { return }
@@ -92,7 +102,25 @@ Observable.just(URL(string: "https://avatars1.githubusercontent.com/u/19504988?s
 ## Advanced
 <br /><br />
 
+
+### Sub-Model Observable from Root-Model Observable
+<br />
+
+```swift
+let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: repoId)
+        
+let userObservable = repoObservable
+            .filterNil()
+            .map { $0.user?.uniqueKey }
+            .filterNil()
+            .take(1)
+            .flatMap { Vetty.rx.model(type: User.self, uniqueKey: $0) }
+```
+<br /><br />
+
 ### Ignore Sub-Model Mutating
+<br />
+
 ```swift
 let observable: Observable<User?> = Vetty.rx.model(type: User.self, uniqueKey: 12345)
 Observable.just(URL(string: "https://avatars1.githubusercontent.com/u/19504988?s=460&v=4"))
@@ -107,6 +135,7 @@ Observable.just(URL(string: "https://avatars1.githubusercontent.com/u/19504988?s
 <br /><br />
 
 ### Non-Ignore Sub-Model with Latest Sub-Model
+<br />
 
 > Model Example, Repository has User(Sub-Model) property!
 ```swift
@@ -161,9 +190,15 @@ class User: VettyProtocol {
 }
 
 ```
+
+<br />
+
 If you don't wanna update user model(sub-model) than you just should set ignoreSubModel as True.
 But, If uou should update repository model(root-model) with latest user model from vetty 
 than you just follow under the example.
+
+<br />
+
 
 ```swift
 let observable: Observable<Repository?> = Vetty.rx.model(type: Repository.self, uniqueKey: "repo-23")
@@ -183,19 +218,6 @@ Observable.just("New Repository Description")
             .disposed(by: disposeBag)
 ```
 
-<br /><br />
-
-### Sub-Model Observable from Root-Model Observable
-```swift
-let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: repoId)
-        
-let userObservable = repoObservable
-            .filterNil()
-            .map { $0.user?.uniqueKey }
-            .filterNil()
-            .take(1)
-            .flatMap { Vetty.rx.model(type: User.self, uniqueKey: $0) }
-```
 <br /><br />
 
 ## Installation
