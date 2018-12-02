@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0.0'
   s.summary          = 'Reactive Model Provider built on RxSwift'
 
-  s.description      = 'Very easy commit & read & mutation mechanism about uour all of model'
+  s.description      = 'Very easy commit & read & mutation mechanism about all of model'
 
   s.homepage         = 'https://github.com/Geektree0101/Vetty'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
