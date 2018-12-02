@@ -10,20 +10,25 @@
 		554383BFD9A11F3653EE5F39 /* Pods_Vetty_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E301CBAEDDFE4DD15E4AF700 /* Pods_Vetty_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		AD90794360D3307B8194FB57 /* Pods_Vetty_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7307C30EE00EEFE0DDFA92 /* Pods_Vetty_Tests.framework */; };
+		9B16AC4521B24DC8003D1B1F /* CellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC4421B24DC8003D1B1F /* CellNode.swift */; };
+		9B16AC4721B24DF6003D1B1F /* GithubRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC4621B24DF6003D1B1F /* GithubRepositoryService.swift */; };
+		9B16AC4921B24E3C003D1B1F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC4821B24E3C003D1B1F /* Repository.swift */; };
+		9B16AC5A21B2581D003D1B1F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B16AC5921B2581D003D1B1F /* Launch Screen.storyboard */; };
+		9B16AC5C21B2688D003D1B1F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC5B21B2688D003D1B1F /* ViewModel.swift */; };
+		9B16AC8321B2767C003D1B1F /* VettySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC8221B2767C003D1B1F /* VettySpec.swift */; };
+		9B16AC8521B2768D003D1B1F /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B16AC8421B2768D003D1B1F /* Repository.json */; };
+		9B16AC8621B27765003D1B1F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC4821B24E3C003D1B1F /* Repository.swift */; };
+		CCB5C5F6C350C924E88CFEE6 /* Pods_Vetty_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7307C30EE00EEFE0DDFA92 /* Pods_Vetty_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
+		9B16AC7C21B27626003D1B1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = Vetty;
+			remoteInfo = Vetty_Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -33,18 +38,26 @@
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Vetty_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Vetty_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7B2C77B681C24C5914D31268 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		716A72EA48B85EF0AB60E35D /* Pods-Vetty_Example-Vetty_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vetty_Example-Vetty_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vetty_Example-Vetty_Tests/Pods-Vetty_Example-Vetty_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B2C77B681C24C5914D31268 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7FE0B1B2FE69F5C4B944320A /* Pods-Vetty_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vetty_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vetty_Example/Pods-Vetty_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A43CDBC377DA07888F7B4E52 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9B16AC4421B24DC8003D1B1F /* CellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNode.swift; sourceTree = "<group>"; };
+		9B16AC4621B24DF6003D1B1F /* GithubRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryService.swift; sourceTree = "<group>"; };
+		9B16AC4821B24E3C003D1B1F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		9B16AC5921B2581D003D1B1F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9B16AC5B21B2688D003D1B1F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9B16AC7721B27626003D1B1F /* Vetty_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Vetty_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B16AC7B21B27626003D1B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B16AC8121B2767C003D1B1F /* Vetty_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vetty_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B16AC8221B2767C003D1B1F /* VettySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VettySpec.swift; sourceTree = "<group>"; };
+		9B16AC8421B2768D003D1B1F /* Repository.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Repository.json; sourceTree = "<group>"; };
+		A43CDBC377DA07888F7B4E52 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AB1052F39C5B83C4E45AE103 /* Pods_Vetty_Example_Vetty_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vetty_Example_Vetty_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD3BEA23264C4A2FAE79A064 /* Pods-Vetty_Example-Vetty_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vetty_Example-Vetty_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vetty_Example-Vetty_Tests/Pods-Vetty_Example-Vetty_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BAF832665344B360E5F60D3F /* Pods-Vetty_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vetty_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vetty_Example/Pods-Vetty_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BB7307C30EE00EEFE0DDFA92 /* Pods_Vetty_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vetty_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEFD0DA049155B5586A44CEA /* Vetty.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Vetty.podspec; path = ../Vetty.podspec; sourceTree = "<group>"; };
+		CEFD0DA049155B5586A44CEA /* Vetty.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Vetty.podspec; path = ../Vetty.podspec; sourceTree = "<group>"; };
 		E301CBAEDDFE4DD15E4AF700 /* Pods_Vetty_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vetty_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB85877AF0C7D483A1EC6373 /* Pods-Vetty_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vetty_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vetty_Tests/Pods-Vetty_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,11 +71,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
+		9B16AC7421B27626003D1B1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD90794360D3307B8194FB57 /* Pods_Vetty_Tests.framework in Frameworks */,
+				CCB5C5F6C350C924E88CFEE6 /* Pods_Vetty_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,7 @@
 			children = (
 				E301CBAEDDFE4DD15E4AF700 /* Pods_Vetty_Example.framework */,
 				BB7307C30EE00EEFE0DDFA92 /* Pods_Vetty_Tests.framework */,
+				AB1052F39C5B83C4E45AE103 /* Pods_Vetty_Example_Vetty_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,6 +99,8 @@
 				7FE0B1B2FE69F5C4B944320A /* Pods-Vetty_Example.release.xcconfig */,
 				08E48B41E5F302C80A67B608 /* Pods-Vetty_Tests.debug.xcconfig */,
 				EB85877AF0C7D483A1EC6373 /* Pods-Vetty_Tests.release.xcconfig */,
+				716A72EA48B85EF0AB60E35D /* Pods-Vetty_Example-Vetty_Tests.debug.xcconfig */,
+				AD3BEA23264C4A2FAE79A064 /* Pods-Vetty_Example-Vetty_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -94,7 +110,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Vetty */,
-				607FACE81AFB9204008FA782 /* Tests */,
+				9B16AC7821B27626003D1B1F /* Vetty_Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				140E64A9E99742661CCE42C7 /* Pods */,
 				11F7CA4ECE77B90948E2CE1E /* Frameworks */,
@@ -105,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* Vetty_Example.app */,
-				607FACE51AFB9204008FA782 /* Vetty_Tests.xctest */,
+				9B16AC7721B27626003D1B1F /* Vetty_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,12 +129,15 @@
 		607FACD21AFB9204008FA782 /* Example for Vetty */ = {
 			isa = PBXGroup;
 			children = (
+				9B16AC8B21B27F47003D1B1F /* Model */,
+				9B16AC8A21B27F34003D1B1F /* ViewController */,
+				9B16AC8921B27F2E003D1B1F /* Service */,
+				9B16AC8821B27F25003D1B1F /* View */,
+				9B16AC8721B27F15003D1B1F /* ViewModel */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				9B16AC5921B2581D003D1B1F /* Launch Screen.storyboard */,
 			);
 			name = "Example for Vetty";
 			path = Vetty;
@@ -132,23 +151,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +159,57 @@
 				7B2C77B681C24C5914D31268 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		9B16AC7821B27626003D1B1F /* Vetty_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9B16AC7B21B27626003D1B1F /* Info.plist */,
+				9B16AC8221B2767C003D1B1F /* VettySpec.swift */,
+				9B16AC8121B2767C003D1B1F /* Vetty_Tests-Bridging-Header.h */,
+				9B16AC8421B2768D003D1B1F /* Repository.json */,
+			);
+			path = Vetty_Tests;
+			sourceTree = "<group>";
+		};
+		9B16AC8721B27F15003D1B1F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9B16AC5B21B2688D003D1B1F /* ViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B16AC8821B27F25003D1B1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B16AC4421B24DC8003D1B1F /* CellNode.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9B16AC8921B27F2E003D1B1F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9B16AC4621B24DF6003D1B1F /* GithubRepositoryService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		9B16AC8A21B27F34003D1B1F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9B16AC8B21B27F47003D1B1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B16AC4821B24E3C003D1B1F /* Repository.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,24 +234,24 @@
 			productReference = 607FACD01AFB9204008FA782 /* Vetty_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* Vetty_Tests */ = {
+		9B16AC7621B27626003D1B1F /* Vetty_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Vetty_Tests" */;
+			buildConfigurationList = 9B16AC7E21B27626003D1B1F /* Build configuration list for PBXNativeTarget "Vetty_Tests" */;
 			buildPhases = (
-				F01A8AFC93FE53F4400D8A7C /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-				A2E2046F9C84AAAD2E5D5ECC /* [CP] Embed Pods Frameworks */,
+				B162DA112C35C4849BCBE2F1 /* [CP] Check Pods Manifest.lock */,
+				9B16AC7321B27626003D1B1F /* Sources */,
+				9B16AC7421B27626003D1B1F /* Frameworks */,
+				9B16AC7521B27626003D1B1F /* Resources */,
+				B3F56180D23EEF80DA815D8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
+				9B16AC7D21B27626003D1B1F /* PBXTargetDependency */,
 			);
 			name = Vetty_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Vetty_Tests.xctest */;
+			productName = Vetty_Tests;
+			productReference = 9B16AC7721B27626003D1B1F /* Vetty_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -207,17 +260,20 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = JTEXWEH4CZ;
 						LastSwiftMigration = 0900;
 					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+					9B16AC7621B27626003D1B1F = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = JTEXWEH4CZ;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -236,7 +292,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* Vetty_Example */,
-				607FACE41AFB9204008FA782 /* Vetty_Tests */,
+				9B16AC7621B27626003D1B1F /* Vetty_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,23 +302,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				9B16AC5A21B2581D003D1B1F /* Launch Screen.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE31AFB9204008FA782 /* Resources */ = {
+		9B16AC7521B27626003D1B1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B16AC8521B2768D003D1B1F /* Repository.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A2E2046F9C84AAAD2E5D5ECC /* [CP] Embed Pods Frameworks */ = {
+		B162DA112C35C4849BCBE2F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vetty_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3F56180D23EEF80DA815D8C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,15 +349,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Vetty_Tests/Pods-Vetty_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -295,12 +381,32 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Vetty_Example/Pods-Vetty_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Vetty/Vetty.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Vetty.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,28 +436,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F01A8AFC93FE53F4400D8A7C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Vetty_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -359,47 +443,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B16AC4721B24DF6003D1B1F /* GithubRepositoryService.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				9B16AC4921B24E3C003D1B1F /* Repository.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				9B16AC5C21B2688D003D1B1F /* ViewModel.swift in Sources */,
+				9B16AC4521B24DC8003D1B1F /* CellNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE11AFB9204008FA782 /* Sources */ = {
+		9B16AC7321B27626003D1B1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				9B16AC8321B2767C003D1B1F /* VettySpec.swift in Sources */,
+				9B16AC8621B27765003D1B1F /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
+		9B16AC7D21B27626003D1B1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* Vetty_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+			targetProxy = 9B16AC7C21B27626003D1B1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
@@ -452,6 +522,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -497,6 +568,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -506,13 +578,14 @@
 			baseConfigurationReference = BAF832665344B360E5F60D3F /* Pods-Vetty_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
 				INFOPLIST_FILE = Vetty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -521,52 +594,79 @@
 			baseConfigurationReference = 7FE0B1B2FE69F5C4B944320A /* Pods-Vetty_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
 				INFOPLIST_FILE = Vetty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
+		9B16AC7F21B27626003D1B1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08E48B41E5F302C80A67B608 /* Pods-Vetty_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Vetty_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Geektree0101.Vetty-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vetty_Tests/Vetty_Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vetty_Example.app/Vetty_Example";
 			};
 			name = Debug;
 		};
-		607FACF41AFB9204008FA782 /* Release */ = {
+		9B16AC8021B27626003D1B1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB85877AF0C7D483A1EC6373 /* Pods-Vetty_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JTEXWEH4CZ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Vetty_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "Geektree0101.Vetty-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vetty_Tests/Vetty_Tests-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vetty_Example.app/Vetty_Example";
 			};
 			name = Release;
@@ -592,11 +692,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Vetty_Tests" */ = {
+		9B16AC7E21B27626003D1B1F /* Build configuration list for PBXNativeTarget "Vetty_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
+				9B16AC7F21B27626003D1B1F /* Debug */,
+				9B16AC8021B27626003D1B1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

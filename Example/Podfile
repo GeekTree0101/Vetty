@@ -2,11 +2,17 @@ use_frameworks!
 
 target 'Vetty_Example' do
   pod 'Vetty', :path => '../'
-
+  pod 'Texture'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxAlamofire'
+  pod 'RxOptional'
+  
   target 'Vetty_Tests' do
     inherit! :search_paths
-
-    pod 'Quick', '~> 1.2.0'
-    pod 'Nimble', '~> 7.0.2'
+    pod "Quick"
+    pod "Nimble"
+    pod 'RxTest'
+    pod 'RxBlocking'
   end
 end
