@@ -45,6 +45,7 @@ class UserViewModel {
         profileURL = observable.map({ $0?.profileURL })
         username = observable.map({ $0?.username })
         
+        
         didTapProfile
             .map { _ in return "DID TAP Profile" }
             .mutate(with: observable,
