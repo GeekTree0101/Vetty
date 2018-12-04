@@ -83,7 +83,6 @@ class VettySpec: QuickSpec {
             it("should be commit") {
                 
                 let repositoryIdsObservable = Observable.just(repositories)
-                    .map { $0.map({ $0 as VettyProtocol })}
                     .commits()
                 
                 let expectedIds = repositories.map({ $0.map({ "\($0.id)" })})

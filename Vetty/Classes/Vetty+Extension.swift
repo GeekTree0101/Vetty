@@ -32,7 +32,7 @@ extension ObservableType {
     }
 }
 
-extension ObservableType where Self.E == VettyProtocol {
+extension ObservableType where E: VettyProtocol {
     
     /**
      Commit Model of Object ObservableType
@@ -52,7 +52,7 @@ extension ObservableType where Self.E == VettyProtocol {
     }
 }
 
-extension ObservableType where Self.E == [VettyProtocol] {
+extension ObservableType where E: Sequence, E.Iterator.Element: VettyProtocol {
     
     /**
      Commit Model of Array ObservableType
@@ -68,7 +68,7 @@ extension ObservableType where Self.E == [VettyProtocol] {
      */
     public func commits(ignoreSubModel: Bool = true) -> Observable<[VettyIdentifier]> {
         
-        return self.map({ Vetty.shared.commit($0, ignoreSubModel: ignoreSubModel) })
+        return self.map({ $0.map({ Vetty.shared.commit($0, ignoreSubModel: ignoreSubModel) })})
     }
 }
 

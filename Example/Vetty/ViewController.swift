@@ -43,7 +43,6 @@ class ViewController: ASViewController<ASTableNode> {
         
         RepoService.loadRepository(params: nil)
             .asObservable()
-            .map({ $0.map({ $0 as VettyProtocol }) })
             .commits(ignoreSubModel: false)
             .bind(to: repoIdRelay)
             .disposed(by: disposeBag)

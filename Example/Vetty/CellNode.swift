@@ -70,6 +70,7 @@ class CellNode: ASCellNode {
         self.automaticallyManagesSubnodes = true
         
         // TODO: Migration RxCocoa-Texture
+    
         
         repoViewModel.desc
             .subscribe(onNext: { [weak self] desc in
