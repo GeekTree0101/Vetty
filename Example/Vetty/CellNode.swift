@@ -2,6 +2,7 @@ import Foundation
 import AsyncDisplayKit
 import RxSwift
 import RxCocoa
+import RxCocoa_Texture
 
 import Vetty
 
@@ -69,49 +70,27 @@ class CellNode: ASCellNode {
         self.selectionStyle = .none
         self.automaticallyManagesSubnodes = true
         
-        // TODO: Migration RxCocoa-Texture
-    
-        
         repoViewModel.desc
-            .subscribe(onNext: { [weak self] desc in
-                self?.descriptionNode.attributedText =
-                    NSAttributedString(string: desc ?? "", attributes: Node.descAttributes)
-                self?.setNeedsLayout()
-            })
+            .bind(to: descriptionNode.rx.text(Node.descAttributes),
+                  setNeedsLayout: self)
             .disposed(by: disposeBag)
         
         userViewModel.profileURL
-            .subscribe(onNext: { [weak self] url in
-                self?.userProfileNode.setURL(url, resetToDefault: true)
-            })
+            .bind(to: userProfileNode.rx.url)
             .disposed(by: disposeBag)
         
         userViewModel.username
-            .subscribe(onNext: { [weak self] username in
-                self?.usernameNode.attributedText =
-                    NSAttributedString(string: username ?? "", attributes: Node.usernameAttributes)
-                self?.setNeedsLayout()
-            })
+            .bind(to: usernameNode.rx.text(Node.usernameAttributes),
+                  setNeedsLayout: self)
             .disposed(by: disposeBag)
         
+        self.userProfileNode.rx.tap
+            .bind(to: userViewModel.didTapProfile)
+            .disposed(by: disposeBag)
         
-        self.userProfileNode.addTarget(self,
-                                       action: #selector(didTapProfile),
-                                       forControlEvents: .touchUpInside)
-        
-        self.descriptionNode.addTarget(self,
-                                       action: #selector(didTapDesc),
-                                       forControlEvents: .touchUpInside)
-    }
-    
-    @objc func didTapProfile() {
-        
-        self.userViewModel.didTapProfile.accept(())
-    }
-    
-    @objc func didTapDesc() {
-        
-        self.repoViewModel.didTapDesc.accept(())
+        self.descriptionNode.rx.tap
+            .bind(to: repoViewModel.didTapDesc)
+            .disposed(by: disposeBag)
     }
 }
 

@@ -7,6 +7,7 @@ target 'Vetty_Example' do
   pod 'RxCocoa'
   pod 'RxAlamofire'
   pod 'RxOptional'
+  pod 'RxCocoa-Texture', :git => 'https://github.com/RxSwiftCommunity/RxCocoa-Texture.git', :branch => 'Texture-2.7'
   
   target 'Vetty_Tests' do
     inherit! :search_paths
