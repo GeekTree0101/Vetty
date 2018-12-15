@@ -4,51 +4,45 @@ import RxCocoa
 
 import Vetty
 
-class RepoViewModel {
+class CellViewModel {
     
     // output
     var desc: Observable<String?>
+    var profileURL: Observable<URL?>
+    var username: Observable<String?>
     
     // input
     let didTapDesc = PublishRelay<Void>()
+    let didTapProfile = PublishRelay<Void>()
     
     let disposeBag = DisposeBag()
     
-    init(_ observable: Observable<Repository?>) {
+
+    init(_ repoId: VettyIdentifier) {
         
-        desc = observable.map { $0?.desc }
+        let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: repoId)
+        
+        let userObservable = repoObservable
+            .filterNil()
+            .map { $0.user?.uniqueKey }
+            .asModel(type: User.self)
+        
+        desc = repoObservable.map { $0?.desc }
+        profileURL = userObservable.map({ $0?.profileURL })
+        username = userObservable.map({ $0?.username })
         
         didTapDesc.map { _ in return "Did Tap Description" }
-            .mutate(with: observable,
+            .mutate(with: repoObservable,
                     ignoreSubModel: true,
                     { repo, newDesc -> Repository? in
                         repo?.desc = newDesc
                         return repo
             })
             .disposed(by: disposeBag)
-    }
-}
-
-class UserViewModel {
-    
-    // output
-    var profileURL: Observable<URL?>
-    var username: Observable<String?>
-    
-    // input
-    let didTapProfile = PublishRelay<Void>()
-    
-    let disposeBag = DisposeBag()
-    
-    init(_ observable: Observable<User?>) {
-        
-        profileURL = observable.map({ $0?.profileURL })
-        username = observable.map({ $0?.username })
-        
         
         didTapProfile
             .map { _ in return "DID TAP Profile" }
-            .mutate(with: observable,
+            .mutate(with: userObservable,
                     ignoreSubModel: true,
                     { user, newName -> User? in
                         user?.profileURL = URL(string: "https://avatars1.githubusercontent.com/u/19504988?s=460&v=4")

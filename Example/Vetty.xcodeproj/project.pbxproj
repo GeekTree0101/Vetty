@@ -15,7 +15,7 @@
 		9B16AC4721B24DF6003D1B1F /* GithubRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC4621B24DF6003D1B1F /* GithubRepositoryService.swift */; };
 		9B16AC4921B24E3C003D1B1F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC4821B24E3C003D1B1F /* Repository.swift */; };
 		9B16AC5A21B2581D003D1B1F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B16AC5921B2581D003D1B1F /* Launch Screen.storyboard */; };
-		9B16AC5C21B2688D003D1B1F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC5B21B2688D003D1B1F /* ViewModel.swift */; };
+		9B16AC5C21B2688D003D1B1F /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC5B21B2688D003D1B1F /* CellViewModel.swift */; };
 		9B16AC8321B2767C003D1B1F /* VettySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC8221B2767C003D1B1F /* VettySpec.swift */; };
 		9B16AC8521B2768D003D1B1F /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B16AC8421B2768D003D1B1F /* Repository.json */; };
 		9B16AC8621B27765003D1B1F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16AC4821B24E3C003D1B1F /* Repository.swift */; };
@@ -46,7 +46,7 @@
 		9B16AC4621B24DF6003D1B1F /* GithubRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryService.swift; sourceTree = "<group>"; };
 		9B16AC4821B24E3C003D1B1F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9B16AC5921B2581D003D1B1F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		9B16AC5B21B2688D003D1B1F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9B16AC5B21B2688D003D1B1F /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		9B16AC7721B27626003D1B1F /* Vetty_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Vetty_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B16AC7B21B27626003D1B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B16AC8121B2767C003D1B1F /* Vetty_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vetty_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		9B16AC8721B27F15003D1B1F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9B16AC5B21B2688D003D1B1F /* ViewModel.swift */,
+				9B16AC5B21B2688D003D1B1F /* CellViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -449,7 +449,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				9B16AC4921B24E3C003D1B1F /* Repository.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				9B16AC5C21B2688D003D1B1F /* ViewModel.swift in Sources */,
+				9B16AC5C21B2688D003D1B1F /* CellViewModel.swift in Sources */,
 				9B16AC4521B24DC8003D1B1F /* CellNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
