@@ -32,6 +32,28 @@ extension ObservableType {
     }
 }
 
+extension Observable where Element == VettyIdentifier? {
+    
+    /**
+     Convert to Taget Model
+     
+     - parameters:
+     - type: VettyProtocol inherited model
+     
+     - returns: Observable<VettylProtocol?>
+     
+     - author: Geektree0101
+     */
+    public func asModel<T: VettyProtocol>(type: T.Type) -> Observable<T?> {
+        
+        return self.asObservable()
+            .filter { $0 != nil }
+            .map { $0! }
+            .take(1)
+            .flatMap { Vetty.rx.model(type: type, uniqueKey: $0) }
+    }
+}
+
 extension ObservableType where E: VettyProtocol {
     
     /**

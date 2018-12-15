@@ -50,46 +50,35 @@ class CellNode: ASCellNode {
     }()
     
     let disposeBag = DisposeBag()
-    let userViewModel: UserViewModel
-    let repoViewModel: RepoViewModel
+    let viewModel: CellViewModel
     
     init(repoId: VettyIdentifier) {
-        let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: repoId)
-        
-        let userObservable = repoObservable
-            .filterNil()
-            .map { $0.user?.uniqueKey }
-            .filterNil()
-            .take(1)
-            .flatMap { Vetty.rx.model(type: User.self, uniqueKey: $0) }
-        
-        self.repoViewModel = .init(repoObservable)
-        self.userViewModel = .init(userObservable)
+        self.viewModel = CellViewModel.init(repoId)
         
         super.init()
         self.selectionStyle = .none
         self.automaticallyManagesSubnodes = true
         
-        repoViewModel.desc
+        viewModel.desc
             .bind(to: descriptionNode.rx.text(Node.descAttributes),
                   setNeedsLayout: self)
             .disposed(by: disposeBag)
         
-        userViewModel.profileURL
+        viewModel.profileURL
             .bind(to: userProfileNode.rx.url)
             .disposed(by: disposeBag)
         
-        userViewModel.username
+        viewModel.username
             .bind(to: usernameNode.rx.text(Node.usernameAttributes),
                   setNeedsLayout: self)
             .disposed(by: disposeBag)
         
         self.userProfileNode.rx.tap
-            .bind(to: userViewModel.didTapProfile)
+            .bind(to: viewModel.didTapProfile)
             .disposed(by: disposeBag)
         
         self.descriptionNode.rx.tap
-            .bind(to: repoViewModel.didTapDesc)
+            .bind(to: viewModel.didTapDesc)
             .disposed(by: disposeBag)
     }
 }
