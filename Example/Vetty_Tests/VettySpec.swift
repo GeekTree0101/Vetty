@@ -95,7 +95,7 @@ class VettySpec: QuickSpec {
             it("should be read target model") {
                 Vetty.shared.commit(repositories, ignoreSubModel: true)
                 self.runRunLoop()
-                let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: "1")
+                let repoObservable = Vetty.rx.observer(type: Repository.self, uniqueKey: "1")
                 expect(try! repoObservable.toBlocking().first()??.id).to(equal(repositories.first!.id))
             }
             
@@ -106,7 +106,7 @@ class VettySpec: QuickSpec {
                 expect(repositories.first!.id).to(equal(1))
                 expect(repositories.first!.desc).to(equal("Vetty Description"))
                 
-                let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: "1")
+                let repoObservable = Vetty.rx.observer(type: Repository.self, uniqueKey: "1")
                 
                 Observable.just("Update Desc")
                     .mutate(with: repoObservable,

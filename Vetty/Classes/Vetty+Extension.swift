@@ -32,7 +32,7 @@ extension ObservableType {
     }
 }
 
-extension Observable where Element == VettyIdentifier? {
+extension Observable where Element == VettyProtocol? {
     
     /**
      Convert to Taget Model
@@ -44,13 +44,14 @@ extension Observable where Element == VettyIdentifier? {
      
      - author: Geektree0101
      */
-    public func asModel<T: VettyProtocol>(type: T.Type) -> Observable<T?> {
+    public func asObserver<T: VettyProtocol>(type: T.Type) -> Observable<T?> {
         
         return self.asObservable()
+            .map { $0?.uniqueKey }
             .filter { $0 != nil }
             .map { $0! }
             .take(1)
-            .flatMap { Vetty.rx.model(type: type, uniqueKey: $0) }
+            .flatMap { Vetty.rx.observer(type: type, uniqueKey: $0) }
     }
 }
 
@@ -107,10 +108,10 @@ extension Reactive where Base: Vetty {
      
      - author: Geektree0101
      */
-    public static func model<T: VettyProtocol>(type: T.Type,
-                                               uniqueKey: VettyIdentifier) -> Observable<T?> {
+    public static func observer<T: VettyProtocol>(type: T.Type,
+                                                    uniqueKey: VettyIdentifier) -> Observable<T?> {
         
-        return Vetty.shared.rx.model(type: type, uniqueKey: uniqueKey)
+        return Vetty.shared.rx.observer(type: type, uniqueKey: uniqueKey)
     }
     
     
@@ -133,7 +134,7 @@ extension Reactive where Base: Vetty {
     }
     
     
-    private func model<T: VettyProtocol>(type: T.Type,
+    private func observer<T: VettyProtocol>(type: T.Type,
                                          uniqueKey: VettyIdentifier) -> Observable<T?> {
         
         let identifier = T.identifierForProvider(uniqueKey)

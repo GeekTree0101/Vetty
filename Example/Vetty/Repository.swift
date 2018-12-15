@@ -44,6 +44,6 @@ class User: VettyProtocol {
     }
     
     func commitSubModelIfNeeds() {
-        
+        // nothing
     }
 }

@@ -73,7 +73,7 @@ let user: User? = Vetty.shared.read(type: User.self, uniqueKey: 12345)
 <br />
 
 ```swift
-let userObservable: Observable<User?> = Vetty.rx.model(type: User.self, uniqueKey: 12345)
+let userObservable: Observable<User?> = Vetty.rx.observer(type: User.self, uniqueKey: 12345)
 ```
 <br /><br />
 
@@ -90,7 +90,7 @@ Vetty.shared.commit(user, ignoreSubModel: true)
 
 2. Using Observable Extension
 ```swift
-let observable: Observable<User?> = Vetty.rx.model(type: User.self, uniqueKey: 12345)
+let observable: Observable<User?> = Vetty.rx.observer(type: User.self, uniqueKey: 12345)
 Observable.just(URL(string: "https://avatars1.githubusercontent.com/u/19504988?s=460&v=4"))
           .mutate(with: observable,
                   { user, newURL -> User? in
@@ -109,14 +109,12 @@ Observable.just(URL(string: "https://avatars1.githubusercontent.com/u/19504988?s
 <br />
 
 ```swift
-let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: repoId)
+let repoObservable = Vetty.rx.observer(type: Repository.self, uniqueKey: repoId)
         
 let userObservable = repoObservable
             .filterNil()
             .map { $0.user?.uniqueKey }
-            .filterNil()
-            .take(1)
-            .flatMap { Vetty.rx.model(type: User.self, uniqueKey: $0) }
+            .asObserver(type: User.self)
 ```
 <br /><br />
 
@@ -124,7 +122,7 @@ let userObservable = repoObservable
 <br />
 
 ```swift
-let observable: Observable<User?> = Vetty.rx.model(type: User.self, uniqueKey: 12345)
+let observable: Observable<User?> = Vetty.rx.observer(type: User.self, uniqueKey: 12345)
 Observable.just(URL(string: "https://avatars1.githubusercontent.com/u/19504988?s=460&v=4"))
           .mutate(with: observable,
                   ignoreSubModel: true) <--- Default is true!
@@ -203,7 +201,7 @@ than you just follow under the example.
 
 
 ```swift
-let observable: Observable<Repository?> = Vetty.rx.model(type: Repository.self, uniqueKey: "repo-23")
+let observable: Observable<Repository?> = Vetty.rx.observer(type: Repository.self, uniqueKey: "repo-23")
 Observable.just("New Repository Description")
           .mutate(with: observable,
                   ignoreSubModel: false) 

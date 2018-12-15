@@ -20,12 +20,8 @@ class CellViewModel {
 
     init(_ repoId: VettyIdentifier) {
         
-        let repoObservable = Vetty.rx.model(type: Repository.self, uniqueKey: repoId)
-        
-        let userObservable = repoObservable
-            .filterNil()
-            .map { $0.user?.uniqueKey }
-            .asModel(type: User.self)
+        let repoObservable = Vetty.rx.observer(type: Repository.self, uniqueKey: repoId)
+        let userObservable = repoObservable.map({ $0?.user }).asObserver(type: User.self)
         
         desc = repoObservable.map { $0?.desc }
         profileURL = userObservable.map({ $0?.profileURL })
